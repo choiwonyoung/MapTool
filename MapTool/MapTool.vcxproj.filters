@@ -42,7 +42,7 @@
     <ClInclude Include="ControlView.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="DlgTab1.h">
+    <ClInclude Include="DlgMap.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -65,7 +65,7 @@
     <ClCompile Include="ControlView.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="DlgTab1.cpp">
+    <ClCompile Include="DlgMap.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

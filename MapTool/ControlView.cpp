@@ -4,7 +4,7 @@
 #include "stdafx.h"
 #include "MapTool.h"
 #include "ControlView.h"
-#include "DlgTab1.h"
+#include "DlgMap.h"
 
 #define SAFE_DELETE(p) {if(p){delete p; p=NULL;}}
 
@@ -27,11 +27,10 @@ CControlView::~CControlView()
 void CControlView::DoDataExchange(CDataExchange* pDX)
 {
 	CFormView::DoDataExchange( pDX );
-	DDX_Control( pDX , IDC_TAB1 , m_ctrlTab );
+	DDX_Control( pDX , IDC_TAP_EDITMAP , m_ctrlTab );
 }
 
 BEGIN_MESSAGE_MAP(CControlView, CFormView)
-	ON_NOTIFY( TCN_SELCHANGE , IDC_TAB1 , &CControlView::OnTcnSelchangeTab1 )
 END_MESSAGE_MAP()
 
 
@@ -67,7 +66,7 @@ void CControlView::OnInitialUpdate()
 	m_ctrlTab.InsertItem( 1 , L"ÅØ½ºÃÄ");
 
 	CRect rect;
-	m_pDlgMap = new CDlgTab1;
+	m_pDlgMap = new CDlgMap;
 	m_pDlgMap->Create( IDD_DLG_Map , &m_ctrlTab );
 	m_pDlgMap->GetWindowRect( &rect );
 	m_pDlgMap->MoveWindow( 5 , 25 , rect.Width() , rect.Height() );

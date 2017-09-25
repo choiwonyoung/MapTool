@@ -102,7 +102,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ControlView.h" />
-    <ClInclude Include="DlgTab1.h" />
+    <ClInclude Include="DlgMap.h" />
     <ClInclude Include="MainFrm.h" />
     <ClInclude Include="MapTool.h" />
     <ClInclude Include="MapToolDoc.h" />
@@ -113,7 +113,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="ControlView.cpp" />
-    <ClCompile Include="DlgTab1.cpp" />
+    <ClCompile Include="DlgMap.cpp" />
     <ClCompile Include="MainFrm.cpp" />
     <ClCompile Include="MapTool.cpp" />
     <ClCompile Include="MapToolDoc.cpp" />

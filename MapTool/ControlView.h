@@ -4,7 +4,7 @@
 
 
 // CControlView form view
-class CDlgTab1;
+class CDlgMap;
 class CControlView : public CFormView
 {
 	DECLARE_DYNCREATE(CControlView)
@@ -29,7 +29,7 @@ protected:
 public:
 	CTabCtrl m_ctrlTab;
 
-	CDlgTab1* m_pDlgMap;
+	CDlgMap* m_pDlgMap;
 	
 	virtual void OnInitialUpdate();
 	afx_msg void OnTcnSelchangeTab1( NMHDR *pNMHDR , LRESULT *pResult );
