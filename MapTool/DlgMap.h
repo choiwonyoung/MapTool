@@ -39,4 +39,8 @@ public:
 	CSliderCtrl m_sliderHeightSize;			// 높이 증가 슬라이드
 	CSliderCtrl m_sliderFrustumDistance;	// 프러스텀 거리 슬라이드
 	CSliderCtrl m_sliderLodLevelSize;		// LOD 레벨 적용 슬라이드
+	afx_msg void OnNMCustomdrawSliderHeightsize( NMHDR *pNMHDR , LRESULT *pResult );
+	afx_msg void OnNMCustomdrawSliderFrustumdistance( NMHDR *pNMHDR , LRESULT *pResult );
+	afx_msg void OnBnClickedCheckLod();
+	afx_msg void OnNMCustomdrawSliderLodlevelsize( NMHDR *pNMHDR , LRESULT *pResult );
 };

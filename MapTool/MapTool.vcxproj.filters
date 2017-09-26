@@ -13,6 +13,9 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="3DSource">
+      <UniqueIdentifier>{ac02f9f5-ce68-46d7-a802-70f63fc61c6a}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
@@ -45,6 +48,12 @@
     <ClInclude Include="DlgMap.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="ToolManager.h">
+      <Filter>3DSource</Filter>
+    </ClInclude>
+    <ClInclude Include="Direct3D.h">
+      <Filter>3DSource</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="MapTool.cpp">
@@ -67,6 +76,12 @@
     </ClCompile>
     <ClCompile Include="DlgMap.cpp">
       <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ToolManager.cpp">
+      <Filter>3DSource</Filter>
+    </ClCompile>
+    <ClCompile Include="Direct3D.cpp">
+      <Filter>3DSource</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

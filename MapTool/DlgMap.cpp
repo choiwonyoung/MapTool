@@ -42,6 +42,10 @@ BEGIN_MESSAGE_MAP( CDlgMap , CDialog )
 	ON_BN_CLICKED( IDC_UP , &CDlgMap::OnBnClickedUp )
 	ON_BN_CLICKED( IDC_FLAT , &CDlgMap::OnBnClickedFlat )
 	ON_BN_CLICKED( IDC_ORIGIN , &CDlgMap::OnBnClickedOrigin )
+	ON_NOTIFY( NM_CUSTOMDRAW , IDC_SLIDER_HEIGHTSIZE , &CDlgMap::OnNMCustomdrawSliderHeightsize )
+	ON_NOTIFY( NM_CUSTOMDRAW , IDC_SLIDER_FRUSTUMDISTANCE , &CDlgMap::OnNMCustomdrawSliderFrustumdistance )
+	ON_BN_CLICKED( IDC_CHECK_LOD , &CDlgMap::OnBnClickedCheckLod )
+	ON_NOTIFY( NM_CUSTOMDRAW , IDC_SLIDER_LODLEVELSIZE , &CDlgMap::OnNMCustomdrawSliderLodlevelsize )
 END_MESSAGE_MAP()
 
 
@@ -49,11 +53,29 @@ END_MESSAGE_MAP()
 // CDlgTab1 message handlers
 BOOL CDlgMap::OnInitDialog()
 {
+	CDialog::OnInitDialog();
 
+	m_nUpDown = -1;
+
+	m_sliderHeightSize.SetRange( 1 , 10 );
+	m_sliderHeightSize.SetPos( m_nHeightSize );
+
+	m_sliderFrustumDistance.SetRange( 1 , 40 );
+	m_sliderFrustumDistance.SetPos( 20 );
+
+	m_sliderLodLevelSize.EnableWindow( FALSE );
+	m_sliderLodLevelSize.SetRange( 5 , 20 );
+	m_sliderLodLevelSize.SetPos( 10 );
+	m_nLodLevelSize = (int)m_sliderLodLevelSize.GetPos() * 100;
+
+	UpdateData( FALSE );
+
+	return TRUE;
 }
 
 BOOL CDlgMap::PreTranslateMessage( MSG* pMsg )
 {
+	return CDialog::PreTranslateMessage( pMsg );
 }
 
 void CDlgMap::OnBnClickedUp()
@@ -79,4 +101,38 @@ void CDlgMap::OnBnClickedFlat()
 void CDlgMap::OnBnClickedOrigin()
 {
 	// TODO: Add your control notification handler code here
+}
+
+
+void CDlgMap::OnNMCustomdrawSliderHeightsize( NMHDR *pNMHDR , LRESULT *pResult )
+{
+	LPNMCUSTOMDRAW pNMCD = reinterpret_cast<LPNMCUSTOMDRAW>( pNMHDR );
+	// TODO: Add your control notification handler code here
+	*pResult = 0;
+
+	OutputDebugString( L"Slider\n" );
+}
+
+
+void CDlgMap::OnNMCustomdrawSliderFrustumdistance( NMHDR *pNMHDR , LRESULT *pResult )
+{
+	LPNMCUSTOMDRAW pNMCD = reinterpret_cast<LPNMCUSTOMDRAW>( pNMHDR );
+	// TODO: Add your control notification handler code here
+	*pResult = 0;
+}
+
+//////////////////////////////////////////////////////////////////////////
+// LOD üũ
+//////////////////////////////////////////////////////////////////////////
+void CDlgMap::OnBnClickedCheckLod()
+{
+	// TODO: Add your control notification handler code here
+}
+
+
+void CDlgMap::OnNMCustomdrawSliderLodlevelsize( NMHDR *pNMHDR , LRESULT *pResult )
+{
+	LPNMCUSTOMDRAW pNMCD = reinterpret_cast<LPNMCUSTOMDRAW>( pNMHDR );
+	// TODO: Add your control notification handler code here
+	*pResult = 0;
 }
