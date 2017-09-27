@@ -33,6 +33,10 @@
 
 #include <afxcontrolbars.h>     // MFC support for ribbons and control bars
 
+#define SAFE_DELETE(p)	if(p) { delete (p); (p) = NULL; }
+#define SAFE_ARRAY_DELETE(p) if(p) { delete[] (p); (p) = NULL; }
+#define SAFE_RELEASE(p)	if(p) {(p)->Release(); (p) = NULL; }
+
 
 
 
