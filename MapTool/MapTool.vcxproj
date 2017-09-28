@@ -104,6 +104,7 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Camera.h" />
     <ClInclude Include="ControlView.h" />
     <ClInclude Include="Direct3D.h" />
     <ClInclude Include="DlgMap.h" />
@@ -117,6 +118,7 @@
     <ClInclude Include="ToolManager.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Camera.cpp" />
     <ClCompile Include="ControlView.cpp" />
     <ClCompile Include="Direct3D.cpp" />
     <ClCompile Include="DlgMap.cpp" />

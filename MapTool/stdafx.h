@@ -5,6 +5,8 @@
 
 #pragma once
 
+#pragma warning( disable : 4005 )
+
 #ifndef VC_EXTRALEAN
 #define VC_EXTRALEAN            // Exclude rarely-used stuff from Windows headers
 #endif
@@ -32,6 +34,11 @@
 #endif // _AFX_NO_AFXCMN_SUPPORT
 
 #include <afxcontrolbars.h>     // MFC support for ribbons and control bars
+
+
+// 사용자 추가 
+#include <d3d9.h>
+#include <d3dx9.h>
 
 #define SAFE_DELETE(p)	if(p) { delete (p); (p) = NULL; }
 #define SAFE_ARRAY_DELETE(p) if(p) { delete[] (p); (p) = NULL; }

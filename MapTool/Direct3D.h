@@ -1,7 +1,7 @@
 #pragma once
 
-#include <d3d9.h>
-#include <d3dx9.h>
+
+
 
 struct PREVIEWVERTEX
 {
@@ -44,7 +44,7 @@ public:
 	HRESULT				Init( HWND hWnd , int width , int height );
 	void				SetUpFog( float , float , float density = 0.0f );
 
-	//
+	// 텍스쳐 미리보기와 관련된 함수
 	HRESULT				InitPreview( HWND hWnd , int width , int height );
 	HRESULT				LoadPreviewTexture( const WCHAR* texName );
 	void				ReleasePreview();
@@ -66,6 +66,7 @@ public:
 private:
 	LPDIRECT3D9			m_pD3D;
 	LPDIRECT3DDEVICE9	m_pDevice;
+
 	LPDIRECT3DTEXTURE9	m_pTex;
 	PREVIEWVERTEX		m_pPreview[4];			// 미리 보기 화면을 위해서 
 

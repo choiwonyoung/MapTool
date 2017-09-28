@@ -6,8 +6,6 @@
 #include "ControlView.h"
 #include "DlgMap.h"
 
-#define SAFE_DELETE(p) {if(p){delete p; p=NULL;}}
-
 // CControlView
 
 IMPLEMENT_DYNCREATE(CControlView, CFormView)

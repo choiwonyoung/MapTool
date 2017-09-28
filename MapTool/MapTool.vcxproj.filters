@@ -54,6 +54,9 @@
     <ClInclude Include="Direct3D.h">
       <Filter>3DSource</Filter>
     </ClInclude>
+    <ClInclude Include="Camera.h">
+      <Filter>3DSource</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="MapTool.cpp">
@@ -81,6 +84,9 @@
       <Filter>3DSource</Filter>
     </ClCompile>
     <ClCompile Include="Direct3D.cpp">
+      <Filter>3DSource</Filter>
+    </ClCompile>
+    <ClCompile Include="Camera.cpp">
       <Filter>3DSource</Filter>
     </ClCompile>
   </ItemGroup>
