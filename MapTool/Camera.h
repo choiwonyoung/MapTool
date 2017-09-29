@@ -8,17 +8,31 @@ public:
 	Camera( D3DXVECTOR3& eye , D3DXVECTOR3& look , D3DXVECTOR3& up , int width , int height );
 	~Camera();
 
+public:
 	// Get 함수
-	const D3DXVECTOR3 GetEyePt()		{ return m_vEyePt; }
-	const D3DXVECTOR3 GetLookatPt()		{ return m_vLookPt; }
-	const D3DXVECTOR3 GetUpVec()		{ return m_vUpVec; }
-	const D3DXVECTOR3 GetViewDir()		{ return m_vView; }
-	const D3DXVECTOR3 GetCross()		{ return m_vCross; }
-	const float GetDistance()			{ return D3DXVec3Length( &( m_vLookPt - m_vEyePt ) ); }
+	const D3DXVECTOR3	GetEyePt()				{ return m_vEyePt; }
+	const D3DXVECTOR3	GetLookatPt()			{ return m_vLookPt; }
+	const D3DXVECTOR3	GetUpVec()				{ return m_vUpVec; }
+	const D3DXVECTOR3	GetViewDir()			{ return m_vView; }
+	const D3DXVECTOR3	GetCross()				{ return m_vCross; }
+	const float			GetDistance()			{ return D3DXVec3Length( &( m_vLookPt - m_vEyePt ) ); }
 
-	D3DXMATRIX GetViewMatrix()			{ return m_matView; }
-	D3DXMATRIX GetBillboardMatrix() { return m_matBillBoard; }
+	D3DXMATRIX			GetViewMatrix()			{ return m_matView; }
+	D3DXMATRIX			GetBillboardMatrix()	{ return m_matBillBoard; }
 
+public:
+	// 설정 관련 함수
+	
+	void SetProjParam( float fFOV , float fAspect , float fNearPlane , float fFarPlane );
+
+	// 카메라 이동 , 회전 , 줌, 설정 적용함수
+	void MoveCamera( float fFoward , float fCross );
+	void RotateCamera( float horizon , float vertical );
+	void ZoomCamera( float zoom );
+	void SetupParams();
+
+private:
+	void _SetViewParam( D3DXVECTOR3 &vEyePt , D3DXVECTOR3& vLookatPt , D3DXVECTOR3& vUpVec );
 public:
 	float		m_fMaxDistance;		// 카메라 최고 거리
 	float		m_fFrustumDistance;	// Frustum 최고 거리
