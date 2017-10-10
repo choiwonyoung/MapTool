@@ -29,10 +29,12 @@ public:
 	void MoveCamera( float fFoward , float fCross );
 	void RotateCamera( float horizon , float vertical );
 	void ZoomCamera( float zoom );
-	void SetupParams();
+	
 
 private:
+	void _SetupParams();
 	void _SetViewParam( D3DXVECTOR3 &vEyePt , D3DXVECTOR3& vLookatPt , D3DXVECTOR3& vUpVec );
+
 public:
 	float		m_fMaxDistance;		// 카메라 최고 거리
 	float		m_fFrustumDistance;	// Frustum 최고 거리
