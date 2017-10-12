@@ -108,13 +108,18 @@
     <ClInclude Include="ControlView.h" />
     <ClInclude Include="Direct3D.h" />
     <ClInclude Include="DlgMap.h" />
+    <ClInclude Include="Frustum.h" />
+    <ClInclude Include="Input.h" />
     <ClInclude Include="MainFrm.h" />
     <ClInclude Include="MapTool.h" />
     <ClInclude Include="MapToolDoc.h" />
     <ClInclude Include="MapToolView.h" />
+    <ClInclude Include="Pick.h" />
+    <ClInclude Include="QuadTree.h" />
     <ClInclude Include="Resource.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
+    <ClInclude Include="Terrain.h" />
     <ClInclude Include="ToolManager.h" />
   </ItemGroup>
   <ItemGroup>
@@ -122,14 +127,19 @@
     <ClCompile Include="ControlView.cpp" />
     <ClCompile Include="Direct3D.cpp" />
     <ClCompile Include="DlgMap.cpp" />
+    <ClCompile Include="Frustum.cpp" />
+    <ClCompile Include="Input.cpp" />
     <ClCompile Include="MainFrm.cpp" />
     <ClCompile Include="MapTool.cpp" />
     <ClCompile Include="MapToolDoc.cpp" />
     <ClCompile Include="MapToolView.cpp" />
+    <ClCompile Include="Pick.cpp" />
+    <ClCompile Include="QuadTree.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="Terrain.cpp" />
     <ClCompile Include="ToolManager.cpp" />
   </ItemGroup>
   <ItemGroup>
