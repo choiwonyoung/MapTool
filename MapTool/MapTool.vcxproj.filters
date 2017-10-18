@@ -66,10 +66,10 @@
     <ClInclude Include="Terrain.h">
       <Filter>3DSource</Filter>
     </ClInclude>
-    <ClInclude Include="Frustum.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="Pick.h">
+      <Filter>3DSource</Filter>
+    </ClInclude>
+    <ClInclude Include="Frustum.h">
       <Filter>3DSource</Filter>
     </ClInclude>
   </ItemGroup>
@@ -113,10 +113,10 @@
     <ClCompile Include="Terrain.cpp">
       <Filter>3DSource</Filter>
     </ClCompile>
-    <ClCompile Include="Frustum.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="Pick.cpp">
+      <Filter>3DSource</Filter>
+    </ClCompile>
+    <ClCompile Include="Frustum.cpp">
       <Filter>3DSource</Filter>
     </ClCompile>
   </ItemGroup>

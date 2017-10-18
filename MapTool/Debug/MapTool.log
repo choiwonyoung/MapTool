@@ -1,5 +1,2 @@
-﻿  Input.cpp
-  c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
-  Camera.cpp
-  Generating Code...
+﻿  Frustum.cpp
   MapTool.vcxproj -> D:\Study\C++\MapTool\Debug\MapTool.exe

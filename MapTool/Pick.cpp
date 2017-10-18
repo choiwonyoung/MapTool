@@ -1,6 +1,7 @@
 ﻿#include "stdafx.h"
 #include "Pick.h"
 
+Pick* g_pPick = NULL;
 
 Pick::Pick( LPDIRECT3DDEVICE9 pDevice , HWND hWnd )
 	: m_pDevice(pDevice)
