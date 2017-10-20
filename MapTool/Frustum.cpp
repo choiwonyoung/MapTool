@@ -132,6 +132,7 @@ bool Frustum::Draw()
 		0				// IDirect3DIndexBuffer9 포인터
 		);
 
+
 	// 현재 할당 할 수 있는 텍스처에 스테이트 값을 설정
 	m_pDevice->SetTextureStageState( 
 		0 ,				// 스테이트 값을 설정하는 텍스처의 스테이지 식별자 , 0부터 시작 최대 8세트 까지 텍스처를 가질 수 있음 , Stage로 지정할 수 있는 최대치는 7
@@ -179,5 +180,6 @@ bool Frustum::Draw()
 
 	m_pDevice->SetRenderState( D3DRS_ALPHABLENDENABLE , FALSE );
 	m_pDevice->SetRenderState( D3DRS_LIGHTING , FALSE );
+
 	return true;
 }
