@@ -9,6 +9,14 @@
 
 using namespace std;
 
+enum LOD_CRACK
+{
+	LOD_BASIC = 0,
+	LOD_LEFT,
+	LOD_TOP,
+	LOD_RIGHT,
+	LOD_BOTTOM,
+};
 // ºê·¯½¬
 struct BRUSH_VERTEX
 {
@@ -97,6 +105,9 @@ public:
 	~Terrain();
 
 	HRESULT Init( int tiles , int cells , int cellSpacing , int nTotalTex , int baseTexIndex );
+	HRESULT CreateVB( int index , TileInfo* pTileInfo );
+	HRESULT CreateIB( int LODLevel );
+
 private:
 	void _SetUpMapInfo( int tiles , int cells , int cellSpacing , int nTotalTex );
 	void _SetUpHeightMap();
