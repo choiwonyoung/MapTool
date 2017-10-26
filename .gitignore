@@ -50,3 +50,8 @@ ipch/maptool-9780c1ea/maptool-a6375e8.ipch
 ipch/maptool-9780c1ea/maptool-a6375e8.ipch
 ipch/maptool-9780c1ea/maptool-a6375e8.ipch
 ipch/maptool-9780c1ea/maptool-a6375e8.ipch
+*.ilk
+*.exe
+*.pdb
+*.obj
+*.idb

@@ -108,6 +108,8 @@ public:
 	HRESULT CreateVB( int index , TileInfo* pTileInfo );
 	HRESULT CreateIB( int LODLevel );
 
+	Frustum* GetFrustum() const { return m_pFrustum; }
+
 private:
 	void _SetUpMapInfo( int tiles , int cells , int cellSpacing , int nTotalTex );
 	void _SetUpHeightMap();
@@ -116,8 +118,7 @@ private:
 	void _DrawBoundaryLine( int index );
 
 public:
-	// «¡∑ØΩ∫≈“
-	Frustum*				m_pFrustum;				// «¡∑ØΩ∫≈“
+	
 	BOOL					m_bFrustumLock;			
 
 	// ∏  ¡§∫∏
@@ -167,6 +168,9 @@ public:
 
 
 private:
+	// «¡∑ØΩ∫≈“
+	Frustum*				m_pFrustum;				// «¡∑ØΩ∫≈“
+
 	LPDIRECT3DDEVICE9		m_pDevice;
 	LPDIRECT3DINDEXBUFFER9	( *m_ppIB )[5];
 	LPDIRECT3DTEXTURE9*		m_ppTexture;

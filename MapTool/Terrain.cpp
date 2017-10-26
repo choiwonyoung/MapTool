@@ -218,15 +218,16 @@ HRESULT Terrain::CreateIB( int LODLevel )
 		// 0은 기본 크랙 인덱스 버퍼
 		int indexSize = size;
 		// crackIndex 1 ~ 4 는 각각 cell 당 3개의 삼각형 추가
-		if( 0 < LODLevel &&
-			( 1 <= crackIndex && crackIndex < 5 ) )
+		if( ( 0 < LODLevel ) &&
+			( 1 <= crackIndex && crackIndex < 5 )
+		  )
 		{
 			// 셀의 가장자리 방향의 3개의 삼각형 추가( 1삼각형 당 3 인덱스 )
 			indexSize += ( m_MapInfo.m_nCells / next ) * 3 * 3;
 		}
 
 		// 인덱스는 타일마다 공통이기 때문에 1타일만 생성해서 공유
-		// 단 , LOD를 적용할 경우 LOD 레셀에 맞게 인덱스 버퍼를 생성
+		// 단 , LOD를 적용할 경우 LOD 레벨에 맞게 인덱스 버퍼를 생성
 		if( FAILED( m_pDevice->CreateIndexBuffer(
 			indexSize * sizeof( WORD ) ,
 			0 ,
