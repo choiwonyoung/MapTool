@@ -1,2 +1,3 @@
-﻿  Frustum.cpp
-  MapTool.vcxproj -> D:\Study\C++\MapTool\Debug\MapTool.exe
+﻿  Terrain.cpp
+Terrain.obj : error LNK2019: unresolved external symbol "private: void __thiscall Terrain::_DrawBoundaryLine(int)" (?_DrawBoundaryLine@Terrain@@AAEXH@Z) referenced in function "public: void __thiscall Terrain::DrawTerrain(void)" (?DrawTerrain@Terrain@@QAEXXZ)
+D:\Study\C++\MapTool\Debug\MapTool.exe : fatal error LNK1120: 1 unresolved externals

@@ -737,3 +737,5 @@ inline int Terrain::_NearPositionInCells( QuadEdgeInfo* pPart , D3DXVECTOR3 pos 
 
 	return nearCellIdx;
 }
+
+extern Terrain* g_pTerrain;

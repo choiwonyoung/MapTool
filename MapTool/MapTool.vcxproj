@@ -106,6 +106,7 @@
   <ItemGroup>
     <ClInclude Include="Camera.h" />
     <ClInclude Include="ControlView.h" />
+    <ClInclude Include="D3DFont.h" />
     <ClInclude Include="Direct3D.h" />
     <ClInclude Include="DlgMap.h" />
     <ClInclude Include="Frustum.h" />
@@ -125,6 +126,7 @@
   <ItemGroup>
     <ClCompile Include="Camera.cpp" />
     <ClCompile Include="ControlView.cpp" />
+    <ClCompile Include="D3DFont.cpp" />
     <ClCompile Include="Direct3D.cpp" />
     <ClCompile Include="DlgMap.cpp" />
     <ClCompile Include="Frustum.cpp" />

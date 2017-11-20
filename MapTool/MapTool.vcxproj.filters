@@ -72,6 +72,9 @@
     <ClInclude Include="Frustum.h">
       <Filter>3DSource</Filter>
     </ClInclude>
+    <ClInclude Include="D3DFont.h">
+      <Filter>3DSource</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="MapTool.cpp">
@@ -117,6 +120,9 @@
       <Filter>3DSource</Filter>
     </ClCompile>
     <ClCompile Include="Frustum.cpp">
+      <Filter>3DSource</Filter>
+    </ClCompile>
+    <ClCompile Include="D3DFont.cpp">
       <Filter>3DSource</Filter>
     </ClCompile>
   </ItemGroup>

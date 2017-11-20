@@ -2,6 +2,8 @@
 #include "Terrain.h"
 
 
+Terrain* g_pTerrain = NULL;
+
 Terrain::Terrain( LPDIRECT3DDEVICE9 pDevice )
 	: m_pDevice(pDevice)
 	, m_ppIB(NULL)
