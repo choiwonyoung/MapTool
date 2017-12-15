@@ -480,7 +480,7 @@ inline void Terrain::_TexturePaintInBrushArea()
 
 			// 현재 저장된 타일 번호와 비교해서 존재하면 저장하지 않는다.
 			bool equal = false;
-			for( int i = 0 ; i < m_vecSplattingTile.size() ; ++i )
+			for( int i = 0 ; i < (int)m_vecSplattingTile.size() ; ++i )
 			{
 				if( tileIndex == m_vecSplattingTile[i] )
 				{

@@ -1122,14 +1122,14 @@ void Terrain::PickTerrain( Pick* pPick )
 			// 3 = nextPart.part[j].BR
 			// 사각형의 윗 삼각형을 대입한다.(0, 1, 2)
 			float dist = 0.0f;
-			if( pPick->IntersectTriangle( nextPart.part[j].TL , nextPart.part[j].TR , nextPart.part[j].BL , dist ) )
+			if( pPick->IntersectTriangle( nextPart.m_part[j].TL , nextPart.m_part[j].TR , nextPart.m_part[j].BL , dist ) )
 			{
 				m_vPickPos = pPick->m_vPickRayOrig + pPick->m_vPickRayDir * dist;
 				m_bPickSuccess = TRUE;
 				break;
 			}
 			// 사각형의 아래 삼각형을 대입한다.(2, 1 ,3)
-			if( pPick->IntersectTriangle( nextPart.part[j].BL , nextPart.part[j].TR , nextPart.part[j].BR , dist ) )
+			if( pPick->IntersectTriangle( nextPart.m_part[j].BL , nextPart.m_part[j].TR , nextPart.m_part[j].BR , dist ) )
 			{
 				m_vPickPos = pPick->m_vPickRayOrig + pPick->m_vPickRayDir * dist;
 				m_bPickSuccess = TRUE;

@@ -218,3 +218,12 @@ int QuadTree::_SearchDrawTitle( int tileNum , Terrain* pTerrain )
 	return tileNum;
 }
 
+void QuadTree::_SetCorners( int _TL , int _TR , int _BL , int _BR )
+{
+	m_nEdge[TL] = _TL;
+	m_nEdge[TR] = _TR;
+	m_nEdge[BL] = _BL;
+	m_nEdge[BR] = _BR;
+	m_nCenter = ( m_nEdge[TL] + m_nEdge[TR] + m_nEdge[BL] + m_nEdge[BR] ) / 4;
+}
+

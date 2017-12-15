@@ -4,9 +4,9 @@ class Terrain;
 
 class QuadTree
 {
-	enum  { MAX_CHILD = 4 };
-	enum EDGE_TYPE { TL, TR, BL, BR };
-	enum INTER_SECT { ALL_OUT = 0 , PART_IN , ALL_IN };
+	enum				{ MAX_CHILD = 4 };
+	enum EDGE_TYPE		{ TL, TR, BL, BR };
+	enum INTER_SECT		{ ALL_OUT = 0 , PART_IN , ALL_IN };
 
 	
 public:
